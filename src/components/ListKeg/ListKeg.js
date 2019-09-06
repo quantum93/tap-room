@@ -1,7 +1,7 @@
 import React from "react";
 import ListKegTitle from "./ListKegTitle";
 
-function ListKeg() {
+function App() {
   return (
     <div className="List-Keg">
       <ListKegTitle />
@@ -9,4 +9,4 @@ function ListKeg() {
   );
 }
 
-export default ListKeg;
+export default App;

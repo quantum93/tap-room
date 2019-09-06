@@ -1,6 +1,6 @@
 import React from "react";
 
-function ListKegTitle() {
+function App() {
   return (
     <div>
       <h2 className="List-Keg">List of Keg Title</h2>
@@ -8,4 +8,4 @@ function ListKegTitle() {
   );
 }
 
-export default ListKegTitle;
+export default App;
