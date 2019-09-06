@@ -1,7 +1,7 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import Home from "./Home";
-import About from "./About";
+import ListKegTitle from "./ListKeg/ListKegTitle";
 import Kombuchas from "./Kombuchas";
 
 function App() {
@@ -13,7 +13,7 @@ function App() {
             <Link to="/">Home</Link>
           </li>
           <li>
-            <Link to="/about">About</Link>
+            <Link to="/listkegtitle">ListKegTitle</Link>
           </li>
           <li>
             <Link to="/kombuchas">Kombuchas</Link>
@@ -23,7 +23,7 @@ function App() {
         <hr />
 
         <Route exact path="/" component={Home} />
-        <Route path="/about" component={About} />
+        <Route path="/ListKegTitle" component={ListKegTitle} />
         <Route path="/kombuchas" component={Kombuchas} />
       </div>
     </Router>
