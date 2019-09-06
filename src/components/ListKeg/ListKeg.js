@@ -2,6 +2,7 @@
 import React from "react";
 import ListKegTitle from "./ListKegTitle";
 import ListKegItem from "./ListKegItem";
+import {Link} from "react-router-dom";
 
 let List_Keg = [
   {name: "Ginger Fixx", brand: "Lion Heart", price: 4.50, alcoholContent: 3},
@@ -13,6 +14,8 @@ let List_Keg = [
 function ListKeg() {
   return (
     <div className="List-Keg">
+      <Link to='/addkeg' className="ListKeg-link">Add new Keg</Link>
+      <hr/>
       <ListKegTitle />
       {List_Keg.map((keg, index) =>
         <ListKegItem

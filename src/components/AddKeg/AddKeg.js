@@ -1,9 +1,11 @@
 import React from "react";
 import "./AddKeg.css";
+import {Link} from "react-router-dom";
 
 function AddKeg() {
   return (
     <div className='AddKeg'>
+    <Link to='/' className="AddKeg-link">Back to the List of Kegs</Link>
       <form>
         <input type='text' id='name' placeholder='Name'/>
         <input type='text' id='brand' placeholder='Brand'/>
