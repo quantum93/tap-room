@@ -1,5 +1,4 @@
 import React from "react";
-import Home from "./Home";
 import Header from "./Header";
 import ListKeg from "./ListKeg/ListKeg";
 import {Route, Switch} from "react-router-dom";
