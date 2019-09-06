@@ -3,7 +3,7 @@ import React from "react";
 function ListKegTitle() {
   return (
     <div>
-      <h2>List of Keg Title</h2>
+      <h2 className="List-Keg">List of Keg Title</h2>
     </div>
   );
 }

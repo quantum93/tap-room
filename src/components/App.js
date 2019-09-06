@@ -1,6 +1,7 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import Home from "./Home";
+import ListKeg from "./ListKeg/ListKeg";
 import ListKegTitle from "./ListKeg/ListKegTitle";
 import Kombuchas from "./Kombuchas";
 
@@ -13,6 +14,9 @@ function App() {
             <Link to="/">Home</Link>
           </li>
           <li>
+            <Link to="/listkeg">ListKeg</Link>
+          </li>
+          <li>
             <Link to="/listkegtitle">ListKegTitle</Link>
           </li>
           <li>
@@ -23,6 +27,7 @@ function App() {
         <hr />
 
         <Route exact path="/" component={Home} />
+        <Route path="/ListKeg" component={ListKeg} />
         <Route path="/ListKegTitle" component={ListKegTitle} />
         <Route path="/kombuchas" component={Kombuchas} />
       </div>
