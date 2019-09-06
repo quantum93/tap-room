@@ -1,6 +1,5 @@
 import React from 'react';
 import PropTypes from "prop-types";
-import minus from './minus.png';
 
 function Keg(props) {
   const priceStyles = {
@@ -14,7 +13,7 @@ function Keg(props) {
     backgroundColor: '#80ced6' // low alcoholContent
   }
   if (props.alcoholContent > 5) {
-    kegStyles.backgroundColor = '#fefbd8'; // high alcoholContent
+    kegStyles.backgroundColor = '#f18973'; // high alcoholContent
   }
 
   return (
@@ -32,7 +31,7 @@ function Keg(props) {
             <button>Edit</button>
             <button>Delete</button>
           </div>
-          <input type='image' src={minus} alt='minus button' title='Subtract a Pint' className='Keg-button-minus' />
+
         </div>
       </div>
       <hr/>
