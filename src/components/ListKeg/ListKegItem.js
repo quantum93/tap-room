@@ -1,23 +1,50 @@
 import React from 'react';
 import PropTypes from "prop-types";
+import minus from './minus.png';
 
-function ListKegItem(props) {
+function Keg(props) {
+  const priceStyles = {
+    color: 'red',
+    fontWeight: 'bold'
+  }
+  if (props.price < 5) {
+    priceStyles.color = 'green';
+  }
+  const kegStyles = {
+    backgroundColor: '#80ced6' // low alcoholContent
+  }
+  if (props.alcoholContent > 5) {
+    kegStyles.backgroundColor = '#fefbd8'; // high alcoholContent
+  }
+
   return (
-    <div className="List-Keg-Item">
-      <h3>{props.name}</h3>
-      <h3>{props.brand}</h3>
-      <h3>${props.price}</h3>
-      <h3>{props.alcoholContent}% alcohol content</h3>
+    <div className='Keg'>
+      <div style={kegStyles} className='Keg-info-container'>
+        <div className='Keg-info' id='Keg-name'>{props.name}</div>
+        <div className='Keg-info' id='Keg-brand'>{props.brand}</div>
+        <div className='Keg-info'>
+          <div id='price' style={priceStyles}>Price: ${props.price}</div>
+          <div id='alcoholContent'>ABV: {props.alcoholContent}%</div>
+          <div id='pints'>Pints: {props.pints}</div>
+        </div>
+        <div className='Keg-buttons-container'>
+          <div>
+            <button>Edit</button>
+            <button>Delete</button>
+          </div>
+          <input type='image' src={minus} alt='minus button' title='Subtract a Pint' className='Keg-button-minus' />
+        </div>
+      </div>
       <hr/>
     </div>
   );
 }
 
-ListKegItem.propTypes = {
+Keg.propTypes = {
   name: PropTypes.string.isRequired,
   brand: PropTypes.string.isRequired,
   price: PropTypes.number.isRequired,
   alcoholContent: PropTypes.number.isRequired
 }
 
-export default ListKegItem;
+export default Keg;

@@ -1,6 +1,6 @@
 
 import React from "react";
-import ListKegTitle from "./ListKegTitle";
+import Keg from "./Keg";
 import ListKegItem from "./ListKegItem";
 import {Link} from "react-router-dom";
 
@@ -16,7 +16,7 @@ function ListKeg() {
     <div className="List-Keg">
       <Link to='/addkeg' className="ListKeg-link">Add new Keg</Link>
       <hr/>
-      <ListKegTitle />
+      <Keg />
       {List_Keg.map((keg, index) =>
         <ListKegItem
           name={keg.name}
