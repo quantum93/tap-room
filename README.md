@@ -1,4 +1,14 @@
+## hex code for color (https://www.color-hex.com/)
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+atom package language-babel for jsx syntax.
+npm i bootstrap
+npm i react-bootstrap
+npm i eslint
+npm i eslint-plugin-react
+npm i react-router-dom
+npm i @material-ui/core
+npm i @material-ui/icons
 
 ## Available Scripts
 
