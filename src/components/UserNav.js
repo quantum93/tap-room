@@ -2,10 +2,9 @@ import React from 'react';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import Button from 'react-bootstrap/Button';
-import SignIn from './LogIn'
+import LogIn from './LogIn'
 
-function UserNav(){
-
+function UserNav() {
   var myStyle = {
     background: "#E23425"
   }
@@ -15,7 +14,7 @@ function UserNav(){
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Collapse id="basic-navbar-nav">
         <Nav className="mr-auto"></Nav>
-        <SignIn />
+        <LogIn />
       </Navbar.Collapse>
     </Navbar>
   );

@@ -9,13 +9,13 @@ import UserNav from "./components/UserNav";
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
+
         <Header />
         <UserNav />
         <Container>
         <ListKeg />
         </Container>
-      </header>
+
     </div>
   );
 }
