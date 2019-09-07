@@ -1,7 +1,7 @@
 import React from "react";
 import Header from "./Header";
 import ListKeg from "./ListKeg/ListKeg";
-import {Router, Route, Switch} from "react-router-dom";
+import {Route, Switch} from "react-router-dom";
 import Error404 from "../Error404";
 import AddKeg from "./AddKeg/AddKeg";
 import EditKeg from "./EditKeg/EditKeg";
