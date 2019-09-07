@@ -10,32 +10,35 @@ function Keg(props) {
     priceStyles.color = 'green';
   }
   const kegStyles = {
-    backgroundColor: '#80ced6' // low alcoholContent
+    backgroundColor: '#E5E5E5', // low alcoholContent
+    borderRadius: "30px"
   }
   if (props.alcoholContent > 5) {
-    kegStyles.backgroundColor = '#f18973'; // high alcoholContent
+    kegStyles.backgroundColor = '#6E7DA2'; // high alcoholContent
+  }
+
+  let myStyle = {
+    textAlign: 'center',
+    fontWeight: 'bold'
   }
 
   return (
-    <div className='Keg'>
+    <div style={myStyle} className='Keg'>
       <div style={kegStyles} className='Keg-info-container'>
-        <div className='Keg-info' id='Keg-name'>{props.name}</div>
-        <div className='Keg-info' id='Keg-brand'>{props.brand}</div>
-        <div className='Keg-info'>
-          <div id='price' style={priceStyles}>Price: ${props.price}</div>
-          <div id='alcoholContent'>ABV: {props.alcoholContent}%</div>
-          <div id='pints'>Pints: {props.pints}</div>
-        </div>
-        <div className='Keg-buttons-container'>
-          <div>
-            <button>Edit</button>
-            <button>Delete</button>
-          </div>
-
+        <div className='Keg-info' id='Keg-name'>Name: {props.name}</div>
+        <div className='Keg-info' id='Keg-brand'>Brand: {props.brand}</div>
+        <div id='price' style={priceStyles}>Price: ${props.price}</div>
+        <div id='alcoholContent'>ABV: {props.alcoholContent}%</div>
+        <div id='pints'>Pints: {props.pints}/124</div>
+      <div className='Keg-buttons-container'>
+        <div>
+          <button>Edit</button>
+          <button>Delete</button>
         </div>
       </div>
-      <hr/>
     </div>
+    <hr/>
+  </div>
   );
 }
 

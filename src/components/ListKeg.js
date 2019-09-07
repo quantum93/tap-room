@@ -10,10 +10,14 @@ let List_Keg = [
   {name: "Ginger Devil", brand: "Brew Dr.", price: 3.79, alcoholContent: 10, pints: 30},
 ]
 
+let myStyle = {
+  textAlign: 'center',
+}
+
 function ListKeg() {
   return (
-    <div className="List-Keg">
-      <Link to='/addkeg' className="ListKeg-link">Add new Keg</Link>
+    <div style={myStyle} className="List-Keg">
+    <Link to='/addkeg' className="ListKeg-link">Add new Keg</Link>
       <hr/>
       {List_Keg.map((keg, index) =>
         <ListKegItem
@@ -21,7 +25,7 @@ function ListKeg() {
           brand={keg.brand}
           price={keg.price}
           alcoholContent={keg.alcoholContent}
-          pints={keg.pints} 
+          pints={keg.pints}
           key={index}/>
       )}
     </div>
