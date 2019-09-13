@@ -14,6 +14,7 @@ function App() {
       <UserNav />
         <Container>
           <ListKeg />
+          <Error404 />
         </Container>
     </div>
   );
