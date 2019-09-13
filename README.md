@@ -1,4 +1,10 @@
+## Initial Component and Route
+
 ![Main Page](/public/Tap-Room.png)
+
+## Updated Component and Route with state
+
+![Main Page](/public/Tap-Room-new.png)
 
 ## hex code for color (https://www.color-hex.com/)
 
