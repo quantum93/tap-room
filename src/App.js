@@ -27,8 +27,8 @@ class App extends React.Component {
       <UserNav />
       <Container>
         <Switch>
-          <Route exact path='/' render={()=><ListKeg listKeg={this.state.masterKegList} />} />
-          <Route exact path='/addkeg' render={()=><AddKegControl onNewKegCreation={this.handleAddingNewKegToList} />} />
+          <Route exact path='/' render={()=><ListKeg ListKeg={this.state.masterKegList} />} />
+          <Route exact path='/addkeg' render={()=><AddKegControl onAddKegCreation={this.handleAddingNewKegToList} />} />
           <Route component={Error404} />
         </Switch>
       </Container>
