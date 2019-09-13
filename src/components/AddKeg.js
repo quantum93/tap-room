@@ -1,8 +1,9 @@
 import React from "react";
 import "./AddKeg.css";
 import {Link} from "react-router-dom";
+import PropTypes from "prop-types";
 
-const AddKeg = () => {
+const AddKeg = (props) => {
 
   let _name = null;
   let _brand = null;
@@ -12,11 +13,20 @@ const AddKeg = () => {
 
   const handleAddKegFormSubmission = (event) => {
     event.preventDefault();
-    console.log(_name.value);
-    console.log(_brand.value);
-    console.log(_price.value);
-    console.log(_alcoholContent.value);
-    console.log(_pints.value);
+    // console.log(_name.value);
+    // console.log(_brand.value);
+    // console.log(_price.value);
+    // console.log(_alcoholContent.value);
+    // console.log(_pints.value);
+
+    props.onAddKegCreation({
+      name: _name.value,
+      brand: _brand.value,
+      price: _price.value,
+      alcoholContent: _alcoholContent.value,
+      pints: _pints.value
+    });
+
     _name.value = '';
     _brand.value = '';
     _price.value = '';
@@ -38,5 +48,7 @@ const AddKeg = () => {
     </div>
   );
 }
+
+AddKeg.propTypes = {onAddKegCreation: PropTypes.func};
 
 export default AddKeg;

@@ -2,6 +2,7 @@
 import React from "react";
 import ListKegItem from "./ListKegItem";
 import {Link} from "react-router-dom";
+import PropTypes from 'prop-types';
 
 // let List_Keg = [
 //   {name: "Ginger Fixx", brand: "Lion Heart", price: 4.50, alcoholContent: 3, pints: 3},
@@ -14,12 +15,12 @@ let myStyle = {
   textAlign: 'center',
 }
 
-function ListKeg() {
+const ListKeg = (props) => {
   return (
     <div style={myStyle} className="List-Keg">
     <Link to='/addkeg' className="ListKeg-link">Add new Keg</Link>
       <hr/>
-      {List_Keg.map((keg, index) =>
+      {props.ListKeg.map((keg, index) =>
         <ListKegItem
           name={keg.name}
           brand={keg.brand}
@@ -31,5 +32,9 @@ function ListKeg() {
     </div>
   );
 }
+
+ListKeg.propTypes = {
+  ListKeg: PropTypes.array
+};
 
 export default ListKeg;
