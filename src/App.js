@@ -13,8 +13,10 @@ function App() {
       <Header />
       <UserNav />
         <Container>
-          <ListKeg />
-          <Error404 />
+        <Switch>
+          <Route exact path='/' component={ListKeg} />
+          <Route component={Error404} />
+          </Switch>
         </Container>
     </div>
   );
