@@ -9,13 +9,15 @@ class AddKegControl extends React.Component {
     this.state = {formVisibleOnPage: false};
   }
 
+  handleConfirmation = () => { this.setState({formVisibleOnPage: true}); }
+
   render() {
     let currentlyVisibleContent = null;
 
     if (this.state.formVisibleOnPage) {
       currentlyVisibleContent = <AddKeg />;
     } else {
-      currentlyVisibleContent = <ConfirmationQuestions />;
+      currentlyVisibleContent = <ConfirmationQuestions onConfirmation={this.handleConfirmation}/>;
     }
 
     return (<div>{currentlyVisibleContent}</div>);
