@@ -6,6 +6,7 @@ import Header from "./components/Header";
 import ListKeg from "./components/ListKeg";
 import UserNav from "./components/UserNav";
 import Error404 from "./components/Error404";
+import AddKegControl from "./components/AddKegControl";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <Container>
         <Switch>
           <Route exact path='/' component={ListKeg} />
+          <Route exact path='/addkeg' component={AddKegControl} />
           <Route component={Error404} />
           </Switch>
         </Container>
