@@ -8,20 +8,27 @@ import UserNav from "./components/UserNav";
 import Error404 from "./components/Error404";
 import AddKegControl from "./components/AddKegControl";
 
-function App() {
-  return (
-    <div className="App">
+class App extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state={masterKegList: []};
+  }
+
+  render() {
+    return (
+      <div className="App">
       <Header />
       <UserNav />
-        <Container>
+      <Container>
         <Switch>
           <Route exact path='/' component={ListKeg} />
           <Route exact path='/addkeg' component={AddKegControl} />
           <Route component={Error404} />
-          </Switch>
-        </Container>
-    </div>
-  );
+        </Switch>
+      </Container>
+      </div>
+    );
+  }
 }
 
 export default App;
