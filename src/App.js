@@ -20,6 +20,11 @@ class App extends React.Component {
     this.setState({masterKegList: newMasterKegList});
   }
 
+  handleDeleteKeg = keg => {
+    const newKegList = this.state.kegList.filter(value => value !== keg);
+    this.setState({kegList: newKegList});
+  }
+
   render() {
     return (
       <div className="App">
@@ -27,7 +32,9 @@ class App extends React.Component {
       <UserNav />
       <Container>
         <Switch>
-          <Route exact path='/' render={()=><ListKeg ListKeg={this.state.masterKegList} />} />
+          <Route exact path='/' render={()=><ListKeg
+            ListKeg={this.state.masterKegList}
+            onDeleteKeg={this.handleDeleteKeg} />} />
           <Route exact path='/addkeg' render={()=><AddKegControl onAddKegCreation={this.handleAddingNewKegToList} />} />
           <Route component={Error404} />
         </Switch>

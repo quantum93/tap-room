@@ -1,15 +1,8 @@
 
 import React from "react";
-import ListKegItem from "./ListKegItem";
+import Keg from "./Keg";
 import {Link} from "react-router-dom";
 import PropTypes from 'prop-types';
-
-// let List_Keg = [
-//   {name: "Ginger Fixx", brand: "Lion Heart", price: 4.50, alcoholContent: 3, pints: 3},
-//   {name: "Lemon Ginger", brand: "Humm", price: 3.50, alcoholContent: 0, pints: 86},
-//   {name: "Original", brand: "Kevita Master Brew", price: 5.00, alcoholContent: 0, pints: 124},
-//   {name: "Ginger Devil", brand: "Brew Dr.", price: 3.79, alcoholContent: 10, pints: 30},
-// ]
 
 let myStyle = {
   textAlign: 'center',
@@ -21,20 +14,22 @@ const ListKeg = (props) => {
     <Link to='/addkeg' className="ListKeg-link">Add new Keg</Link>
       <hr/>
       {props.ListKeg.map((keg, index) =>
-        <ListKegItem
+        <Keg
           name={keg.name}
           brand={keg.brand}
           price={keg.price}
           alcoholContent={keg.alcoholContent}
           pints={keg.pints}
-          key={index}/>
+          key={keg.id}
+          onDeleteKeg={props.onDeleteKeg}/>
       )}
     </div>
   );
 }
 
 ListKeg.propTypes = {
-  ListKeg: PropTypes.array
+  ListKeg: PropTypes.array,
+  onDeleteKeg: PropTypes.func
 };
 
 export default ListKeg;

@@ -27,16 +27,17 @@ function Keg(props) {
       <div style={kegStyles} className='Keg-info-container'>
         <div className='Keg-info' id='Keg-name'>Name: {props.name}</div>
         <div className='Keg-info' id='Keg-brand'>Brand: {props.brand}</div>
+
         <div id='price' style={priceStyles}>Price: ${props.price}</div>
         <div id='alcoholContent'>ABV: {props.alcoholContent}%</div>
-        <div id='pints'>Pints: {props.pints}/124</div>
-      <div className='Keg-buttons-container'>
-        <div>
+        <div id='pints'>Pints: {props.pints}/124<button>Sell Pint</button></div>
+
+        <div className='Keg-buttons-container'>
           <button>Edit</button>
           <button>Delete</button>
         </div>
+
       </div>
-    </div>
     <hr/>
   </div>
   );

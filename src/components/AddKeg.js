@@ -2,6 +2,7 @@ import React from "react";
 import "./AddKeg.css";
 import {Link} from "react-router-dom";
 import PropTypes from "prop-types";
+import { v4 } from 'uuid';
 
 const AddKeg = (props) => {
 
@@ -24,7 +25,8 @@ const AddKeg = (props) => {
       brand: _brand.value,
       price: _price.value,
       alcoholContent: _alcoholContent.value,
-      pints: _pints.value
+      pints: _pints.value,
+      id: v4()
     });
 
     _name.value = '';
